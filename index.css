@@ -1,20 +1,29 @@
 @charset "UTF-8";
-@media print {
-  .no-print {
-    display: none !important;
-  }
-}
-body {
-  margin: auto;
-  max-width: 720px;
-  font-family: "Computer Modern Serif", "Times New Roman", Times, serif;
-  color: #335;
-}
-
 header {
   display: block;
   margin-top: 50vh;
+  margin-bottom: 50vh;
   transform: translateY(-50%);
+}
+
+@keyframes shrink {
+  from {
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+    transform: translateY(-50%);
+  }
+  to {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform: translateY(0%);
+  }
+}
+header.shrink {
+  animation-name: shrink;
+  animation-duration: 1s;
+  transform: translateY(0%);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 header > h1 {
@@ -33,11 +42,46 @@ header > .action-list {
 }
 
 header > .action-list > li {
-  display: inline;
+  padding-top: 10px;
+  display: inline-block;
 }
 
 header > .action-list > li:not(:last-child)::after {
-  content: "—";
+  content: " — ";
+}
+
+@media only screen and (max-width: 480px) {
+  header > .action-list > li {
+    display: block;
+  }
+
+  header > .action-list > li:not(:last-child)::after {
+    content: "";
+  }
+}
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  header {
+    margin-top: 10px;
+    transform: translateY(0%);
+    margin-bottom: 10px;
+  }
+  header h1 {
+    text-align: left;
+  }
+  header .action-list {
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+body {
+  margin: auto;
+  max-width: 720px;
+  font-family: "Computer Modern Serif", "Times New Roman", Times, serif;
+  color: #335;
 }
 
 a {

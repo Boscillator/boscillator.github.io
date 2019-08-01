@@ -2,4 +2,17 @@
     .no-print {
         display: none !important;
     }
+
+    header {
+        margin-top: $padding;
+        transform: translateY(0%);
+        margin-bottom: $padding;
+        h1 {
+            text-align: left;
+        }
+        .action-list {
+            text-align: left;
+            padding-left: $padding;
+        }
+    }
 }

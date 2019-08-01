@@ -1,6 +1,6 @@
 $font-stack: 'Computer Modern Serif', 'Times New Roman', Times, serif;
 $text-color: #335;
-$padding: 10px;
+$padding: 1em;
 
 @import 'header.scss';
 @import 'print.scss';
@@ -15,5 +15,17 @@ body {
 
 a {
     color: $text-color;
+}
+
+h2 {
+    margin-top: $padding;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+p {
+    text-indent: $padding;
+    margin-top: 0px;
+    margin-bottom: $padding;
 }
 

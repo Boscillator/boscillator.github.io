@@ -1,0 +1,72 @@
+$font-stack: 'Computer Modern Serif', 'Times New Roman', Times, serif;
+$text-color: #223;
+$padding: 1.1em;
+
+@import 'header.scss';
+@import 'print.scss';
+@import 'mobile.scss';
+
+
+body {
+    margin: auto;
+    max-width: 720px;
+    font-family: $font-stack;
+    color: $text-color;
+    margin-bottom: $padding;
+    padding: $padding;
+}
+
+a {
+    color: $text-color;
+}
+
+h2 {
+    margin-top: $padding;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.right-text {
+    text-align: right;
+    display: inline-block;
+    float: right;
+}
+
+p {
+    padding-left: $padding;
+    margin-top: $padding/4;
+    margin-bottom: $padding/4;
+    clear: right;
+}
+
+abbr {
+    text-decoration: none;
+    border-bottom: 1px dotted $text-color;
+
+}
+
+#tech-list {
+    list-style: none;
+    padding-left: 0px;
+    margin-left: $padding;
+    margin-top: $padding/2;
+    margin-bottom: $padding/2;
+
+    li {
+        display: inline;
+    }
+
+    li:not(:last-child)::after {
+        content: ",";
+    }
+
+    li:last-child::after {
+        content: ".";
+    }
+}
+

@@ -1,0 +1,62 @@
+header {
+    display: block;
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+    transform: translateY(-50%);
+}
+
+@keyframes shrink {
+    from { 
+        margin-top: 50vh;
+        margin-bottom: 50vh;
+        transform: translateY(-50%);
+     }
+    to { 
+        margin-top: $padding; 
+        margin-bottom: $padding;
+        transform: translateY(0%);
+    }
+}
+
+header.shrink {
+    animation-name: shrink;
+    animation-duration: 1s;
+    transform: translateY(0%);
+    margin-top: $padding;
+    margin-bottom: $padding;
+}
+
+header >  h1 {
+    color: $text-color;
+    padding: 0px;
+    font-variant: small-caps;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+header > .action-list {
+    margin-top: 0px;
+    list-style-type: none;
+    padding-left: 0px;
+    text-align: center;
+}
+
+header > .action-list > li {
+    padding-top: $padding;
+    display: inline-block;
+}
+
+header > .action-list > li:not(:last-child)::after {
+    content: "\2003\2014\2003"; // em-space em-dash em-space
+}
+
+@media only screen and (max-width: 480px) {
+    // Rework action list for small screens
+    header > .action-list > li {
+        display: block;
+    }
+    
+    header > .action-list > li:not(:last-child)::after {
+        content: ""; // em-space em-dash em-space
+    }
+}

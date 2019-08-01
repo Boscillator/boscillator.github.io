@@ -1,0 +1,29 @@
+@media screen {
+    .no-web {
+        display: none !important;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    header {
+        margin-top: $padding;
+        transform: translateY(0%);
+        margin-bottom: $padding;
+    }
+
+    body {
+        margin-bottom: 0px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    abbr {
+        border-bottom: none !important;
+    }
+}

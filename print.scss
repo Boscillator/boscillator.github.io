@@ -1,3 +1,9 @@
+@media screen {
+    .no-web {
+        display: none !important;
+    }
+}
+
 @media print {
     .no-print {
         display: none !important;
@@ -7,12 +13,17 @@
         margin-top: $padding;
         transform: translateY(0%);
         margin-bottom: $padding;
-        h1 {
-            text-align: left;
-        }
-        .action-list {
-            text-align: left;
-            padding-left: $padding;
-        }
+    }
+
+    body {
+        margin-bottom: 0px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    abbr {
+        border-bottom: none !important;
     }
 }

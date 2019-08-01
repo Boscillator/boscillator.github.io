@@ -13,8 +13,8 @@ header {
     transform: translateY(-50%);
   }
   to {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 1.1em;
+    margin-bottom: 1.1em;
     transform: translateY(0%);
   }
 }
@@ -22,12 +22,12 @@ header.shrink {
   animation-name: shrink;
   animation-duration: 1s;
   transform: translateY(0%);
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1.1em;
+  margin-bottom: 1.1em;
 }
 
 header > h1 {
-  color: #335;
+  color: #223;
   padding: 0px;
   font-variant: small-caps;
   text-align: center;
@@ -42,7 +42,7 @@ header > .action-list {
 }
 
 header > .action-list > li {
-  padding-top: 1em;
+  padding-top: 1.1em;
   display: inline-block;
 }
 
@@ -59,45 +59,103 @@ header > .action-list > li:not(:last-child)::after {
     content: "";
   }
 }
+@media screen {
+  .no-web {
+    display: none !important;
+  }
+}
 @media print {
   .no-print {
     display: none !important;
   }
 
   header {
-    margin-top: 1em;
+    margin-top: 1.1em;
     transform: translateY(0%);
-    margin-bottom: 1em;
+    margin-bottom: 1.1em;
   }
-  header h1 {
-    text-align: left;
+
+  body {
+    margin-bottom: 0px;
   }
-  header .action-list {
-    text-align: left;
-    padding-left: 1em;
+
+  a {
+    text-decoration: none;
+  }
+
+  abbr {
+    border-bottom: none !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h1, h2, h3 {
+    margin-top: 2em !important;
+    margin-bottom: 2em !important;
+  }
+
+  p {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+    padding-left: 0px !important;
   }
 }
 body {
   margin: auto;
   max-width: 720px;
   font-family: "Computer Modern Serif", "Times New Roman", Times, serif;
-  color: #335;
+  color: #223;
+  margin-bottom: 1.1em;
+  padding: 1.1em;
 }
 
 a {
-  color: #335;
+  color: #223;
 }
 
 h2 {
-  margin-top: 1em;
+  margin-top: 1.1em;
   padding: 0px;
   margin-bottom: 0px;
 }
 
-p {
-  text-indent: 1em;
+h3 {
   margin-top: 0px;
-  margin-bottom: 1em;
+  margin-bottom: 0px;
+}
+
+.right-text {
+  text-align: right;
+  display: inline-block;
+  float: right;
+}
+
+p {
+  padding-left: 1.1em;
+  margin-top: 0.275em;
+  margin-bottom: 0.275em;
+  clear: right;
+}
+
+abbr {
+  text-decoration: none;
+  border-bottom: 1px dotted #223;
+}
+
+#tech-list {
+  list-style: none;
+  padding-left: 0px;
+  margin-left: 1.1em;
+  margin-top: 0.55em;
+  margin-bottom: 0.55em;
+}
+#tech-list li {
+  display: inline;
+}
+#tech-list li:not(:last-child)::after {
+  content: ",";
+}
+#tech-list li:last-child::after {
+  content: ".";
 }
 
 /*# sourceMappingURL=index.css.map */

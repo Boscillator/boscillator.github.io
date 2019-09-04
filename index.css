@@ -13,8 +13,8 @@ header {
     transform: translateY(-50%);
   }
   to {
-    margin-top: 1.1em;
-    margin-bottom: 1.1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     transform: translateY(0%);
   }
 }
@@ -22,8 +22,8 @@ header.shrink {
   animation-name: shrink;
   animation-duration: 1s;
   transform: translateY(0%);
-  margin-top: 1.1em;
-  margin-bottom: 1.1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 header > h1 {
@@ -42,12 +42,16 @@ header > .action-list {
 }
 
 header > .action-list > li {
-  padding-top: 1.1em;
+  padding-top: 1em;
   display: inline-block;
 }
 
 header > .action-list > li:not(:last-child)::after {
   content: " — ";
+}
+
+header > .action-list > li.line-break::after {
+  content: "";
 }
 
 @media only screen and (max-width: 480px) {
@@ -70,9 +74,9 @@ header > .action-list > li:not(:last-child)::after {
   }
 
   header {
-    margin-top: 1.1em;
+    margin-top: 1em;
     transform: translateY(0%);
-    margin-bottom: 1.1em;
+    margin-bottom: 1em;
   }
 
   body {
@@ -104,8 +108,8 @@ body {
   max-width: 720px;
   font-family: "Computer Modern Serif", "Times New Roman", Times, serif;
   color: #223;
-  margin-bottom: 1.1em;
-  padding: 1.1em;
+  margin-bottom: 1em;
+  padding: 1em;
 }
 
 a {
@@ -113,7 +117,7 @@ a {
 }
 
 h2 {
-  margin-top: 1.1em;
+  margin-top: 1em;
   padding: 0px;
   margin-bottom: 0px;
 }
@@ -130,9 +134,9 @@ h3 {
 }
 
 p {
-  padding-left: 1.1em;
-  margin-top: 0.275em;
-  margin-bottom: 0.275em;
+  padding-left: 1em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
   clear: right;
 }
 
@@ -144,9 +148,9 @@ abbr {
 #tech-list {
   list-style: none;
   padding-left: 0px;
-  margin-left: 1.1em;
-  margin-top: 0.55em;
-  margin-bottom: 0.55em;
+  margin-left: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 #tech-list li {
   display: inline;

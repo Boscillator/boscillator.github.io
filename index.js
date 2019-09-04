@@ -1,5 +1,5 @@
 
-var SCROLL_THRESH = 100;
+var SCROLL_THRESH = 30;
 
 // Shrink header when user starts to scroll
 document.addEventListener('scroll', function(e) {

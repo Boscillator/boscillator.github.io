@@ -14,6 +14,7 @@ body {
     color: $text-color;
     margin-bottom: $padding;
     padding: $padding;
+    font-size: 11pt;
 }
 
 a {
@@ -42,12 +43,20 @@ p {
     margin-top: $padding/4;
     margin-bottom: $padding/4;
     clear: right;
+
+    max-width: 6in;
+    text-align: justify;
 }
 
 abbr {
     text-decoration: none;
     border-bottom: 1px dotted $text-color;
 
+}
+
+.sunken {
+    height: 0;
+    overflow-y: visible;
 }
 
 #tech-list {

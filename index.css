@@ -50,10 +50,6 @@ header > .action-list > li:not(:last-child)::after {
   content: " — ";
 }
 
-header > .action-list > li.line-break::after {
-  content: "";
-}
-
 @media only screen and (max-width: 480px) {
   header > .action-list > li {
     display: block;
@@ -110,6 +106,7 @@ body {
   color: #223;
   margin-bottom: 1em;
   padding: 1em;
+  font-size: 11pt;
 }
 
 a {
@@ -138,11 +135,18 @@ p {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
   clear: right;
+  max-width: 6in;
+  text-align: justify;
 }
 
 abbr {
   text-decoration: none;
   border-bottom: 1px dotted #223;
+}
+
+.sunken {
+  height: 0;
+  overflow-y: visible;
 }
 
 #tech-list {
